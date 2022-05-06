@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How is the Weather?</title>
     <link rel="stylesheet" href="./dist/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/a7fbca0e61.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="index.js" type="module" defer></script>
   </head>
   <body>
@@ -13,9 +19,11 @@
       <div class="card">
         <div class="card__header"></div>
 
-        <div class="card__body"></div>
+        <div class="card__body">
+          <input type="text" class="search-input" placeholder="City Name" />
+          <button class="search-btn fa-solid fa-magnifying-glass"></button>
+        </div>
       </div>
     </main>
-    <button class="send">Procurar</button>
   </body>
 </html>

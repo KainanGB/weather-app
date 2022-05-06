@@ -1,1 +1,61 @@
 @forward "globals";
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-white);
+  color: var(--clr-grey);
+
+  & .card {
+    background-color: var(--clr-white);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    margin-bottom: 2rem;
+    transition: transform 2s;
+
+    &.active {
+      &:hover {
+        transform: scale(110%);
+      }
+    }
+
+    &__header {
+      max-height: 7rem;
+
+      & > img {
+        position: relative;
+        bottom: 3rem;
+        max-width: 15rem;
+        clip-path: circle();
+      }
+    }
+
+    &__body {
+      text-align: center;
+
+      & .search-input {
+        border: none;
+        box-shadow: rgb(50 50 93 / 50%) 0px 2px 5px -1px,
+          rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        outline: none;
+        color: var(--clr-grey);
+      }
+
+      & .search-btn {
+        border: transparent;
+        box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
+          rgb(0 0 0 / 100%) 0px 1px 3px -1px;
+        padding: 0.58rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}
